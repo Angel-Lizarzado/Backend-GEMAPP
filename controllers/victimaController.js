@@ -14,9 +14,11 @@ exports.crearVictima = async (req, res) => {
       [estado, apellidos, nombre, DNI, sexo, telefono, movil, email]
     );
 
-    res
-      .status(201)
-      .json({ message: "Víctima creada", id_victima: result.insertId });
+    res.status(201).json({
+      message: "Víctima creada",
+      id_victima: result.insertId,
+      ok: true,
+    });
   } catch (err) {
     res.status(500).json({ error: "Error en la BD" });
   }
