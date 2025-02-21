@@ -10,8 +10,8 @@ const {
 } = require("../controllers/victimaController");
 
 router.post("/", crearVictima);
-router.get("/", verificarToken, obtenerVictimas);
-router.get("/:id", verificarToken, obtenerVictimaPorId);
+router.get("/", obtenerVictimas);
+router.get("/:id", obtenerVictimaPorId);
 router.put("/:id", verificarToken, actualizarVictima);
 router.delete("/:id", verificarToken, eliminarVictima);
 

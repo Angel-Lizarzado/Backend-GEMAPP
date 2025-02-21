@@ -11,8 +11,8 @@ const {
 } = require("../controllers/testigoController");
 
 router.post("/", crearTestigo);
-router.get("/", verificarToken, obtenerTestigos);
-router.get("/:id", verificarToken, obtenerTestigoPorId);
+router.get("/", obtenerTestigos);
+router.get("/:id", obtenerTestigoPorId);
 router.put("/:id", verificarToken, actualizarTestigo);
 router.delete("/:id", verificarToken, eliminarTestigo);
 
